@@ -5,7 +5,7 @@ using namespace std;
 int main() {
     
     string nama; // variabel untuk menyimpan nama
-    char kom, jenisKelamin; // variabel untuk menyimpan KOM 
+    char kom, jenisKelamin; // variabel untuk menyimpan KOM dan jenis kelamin
     int nim; // variabel untuk menyimpan nim
     float ip; // variabel untuk menympan IP
 
