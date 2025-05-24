@@ -11,7 +11,7 @@ int main()
         cin >> jari; // membaca nilai jari-jari dari input pengguna
 
         volume = ((float)4/3) * (phi) * (jari*jari*jari); // rumus menghitung volume bola 
-        luas = 4 * phi * jari * jari; // rumus menghitung luas permukaan bola 
+        luas = 4 * phi * jari * jari; // rumus menghitung luas permukaan bola
 
         cout << "Volume : " << volume << endl; // menampilkan hasil volume bola
         cout << "luas : " << luas << endl; // menampilkan hasil luas permukaan bola
