@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    string password, sandi, expected = "";
+    string password, sandi, expected = ""; // deklarasi variabel bertipe string
 
     cout << "Masukkan kata sandi : ";
     cin >> password;
