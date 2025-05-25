@@ -1,17 +1,27 @@
 #include <iostream>
 using namespace std;
 
+// Bentuk umum fungsi
+// tipe_fungsi nama_fungsi (parameter){
+//     // Statement
+//     // Statement
+//     ...
+// }
+
 // fungsi tanpa nilai balikan
-void tampilkanPesan() {
-    cout << "==== SELAMAT DATANG DI AP 2 ====" << endl;
+void sapa(string nama) { // nama = parameter formal
+    cout << "Halo" << nama << "==== SELAMAT DATANG DI AP 2 ====" << endl;
 }
 
 // fungsi dengan nilai balikan
 int tambah(int a, int b) {
-    return a + b;
+    return a + b; // mengembalikan nilai 'hasil'
 }
 
 // fungsi overload
+// => Fungsi yang namanya sama tapi parameternya berbeda
+// => Gunanya untuk mempermudah pemanggilan fungsi dengan input berbeda, yang otomatis menyesuaikan dengan tipe argumen
+int kali(int x, int y){
 int kali(int a, int b) {
     return a * b;
 }
