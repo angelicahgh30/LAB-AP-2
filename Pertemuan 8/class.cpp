@@ -1,44 +1,60 @@
-
 #include <iostream>
 using namespace std;
 
+// Struktur dari Class
+// class nama_class{
+//     private:
+//         anggota_private;
+//     protected:
+//         anggota_protected;
+//     public:
+//         anggota_public;
+// };
+
 class ContohAkses {
-    private:
+    private: // anggota yang hanya bisa diakses oleh class itu sendiri
         int privateVar;
     
-    protected:
+    protected: // anggota yang bisa diakses oleh parent dan child class
         int protectedVar;
 
-    public:
+    public: // anggotanya bisa diakses dari luar class
         int publicVar;
 
-    // Constructor
-    ContohAkses() {
+    // Constructor => fungsi khusus yang akan otomatis dipanggil saat objek dibuat
+     ContohAkses() {  // ini constructor
         privateVar = 1;
         protectedVar = 2;
         publicVar = 3;
     }
 
-    void tampilkanSemua() {
+    // Method => fungsi-fungsi di dalam class
+    void tampilkanSemua() { // merupakan method
         cout << "Akses dari dalam class : " << endl;
         cout << privateVar << endl;
         cout << protectedVar << endl;
         cout << publicVar << endl;
     }
+    void tampilkanNama(string namaku){ // merupakan method
+        string nama = namaku;
+        cout << "Nama saya adalah " << nama << endl;
+    }
 };
 
-class Turunan : public ContohAkses {
+// kelas turunan (child class)
+class Turunan : public ContohAkses { // class turunan bisa mewarisi semua atribut milik class 'contoh_akses'
     public:
-    void aksesProtected() {
+    void aksesProtected() { // membuat method
         cout << protectedVar << endl;
         cout << publicVar << endl;
-        // cout << privateVar << endl; // error
+         // cout << "Akses privateVar : " << privateVar << endl; Akan error, karena hanya bisa diakses oleh class parent
     }
 };
 
 int main () {
-    ContohAkses obj;
-    obj.tampilkanSemua();
+    ContohAkses objek; // deklarasi variabel bertipe 'contoh_akses'
+    objek.tampilkanSemua(); // memanggil method
+    objek.tampilkanNama("Angelica"); // memanggil method dengan parameter aktual berupa string
 
     cout << "\nAkses dari luar class : " << endl;
     // cout << obj.privateVar << endl; // error 
